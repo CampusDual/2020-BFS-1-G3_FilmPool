@@ -4,13 +4,13 @@
 
     <parent>
         <groupId>com.ontimize</groupId>
-        <artifactId>filmPool</artifactId>
+        <artifactId>film-pool</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <name>Basic project api</name>
-    <description>Basic project api code.</description>
-    <artifactId>filmPool-api</artifactId>
+    <name>film-pool api</name>
+    <description>film-pool api code.</description>
+    <artifactId>film-pool-api</artifactId>
     <packaging>jar</packaging>
 
     <properties>

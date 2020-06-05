@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.ontimize</groupId>
-		<artifactId>filmPool</artifactId>
+		<artifactId>film-pool</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>filmPool-model</artifactId>
-	<name>Basic project model</name>
-	<description>Basic project models</description>
+	<artifactId>film-pool-model</artifactId>
+	<name>film-pool model</name>
+	<description>film-pool models</description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -23,12 +23,12 @@
 		</dependency>
 		<dependency>
 			<groupId>com.ontimize</groupId>
-			<artifactId>filmPool-api</artifactId>
+			<artifactId>film-pool-api</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>com.ontimize</groupId>
-			<artifactId>filmPool-frontend</artifactId>
+			<artifactId>film-pool-frontend</artifactId>
 		</dependency>
 
 		<dependency>
