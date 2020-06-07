@@ -20,22 +20,22 @@ public class ChapterService implements IChapterService {
     @Autowired private DefaultOntimizeDaoHelper daoHelper;
 
     @Override
-    public EntityResult candidateQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
+    public EntityResult chapterQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
         return this.daoHelper.query(this.chapterDao,keyMap,attrList);
     }
 
     @Override
-    public EntityResult candidateInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
+    public EntityResult chapterInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
         return this.daoHelper.insert(this.chapterDao,attrMap);
     }
 
     @Override
-    public EntityResult candidateUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+    public EntityResult chapterUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
         return this.daoHelper.update(this.chapterDao,attrMap,keyMap);
     }
 
     @Override
-    public EntityResult candidateDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+    public EntityResult chapterDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
         return this.daoHelper.delete(this.chapterDao,keyMap);
     }
 }

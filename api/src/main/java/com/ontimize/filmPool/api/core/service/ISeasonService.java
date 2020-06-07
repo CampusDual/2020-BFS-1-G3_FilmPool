@@ -8,8 +8,8 @@ import java.util.Map;
 
 public interface ISeasonService {
 
-    public EntityResult candidateQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
-    public EntityResult candidateInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
-    public EntityResult candidateUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
-    public EntityResult candidateDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+    public EntityResult seasonQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
+    public EntityResult seasonInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
+    public EntityResult seasonUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+    public EntityResult seasonDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 }

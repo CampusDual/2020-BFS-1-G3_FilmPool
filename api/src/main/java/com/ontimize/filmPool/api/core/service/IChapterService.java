@@ -8,8 +8,8 @@ import java.util.Map;
 
 public interface IChapterService {
 
-    public EntityResult candidateQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
-    public EntityResult candidateInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
-    public EntityResult candidateUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
-    public EntityResult candidateDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+    public EntityResult chapterQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
+    public EntityResult chapterInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
+    public EntityResult chapterUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+    public EntityResult chapterDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 }

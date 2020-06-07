@@ -21,22 +21,22 @@ public class SeasonService implements ISeasonService {
     @Autowired private DefaultOntimizeDaoHelper daoHelper;
 
     @Override
-    public EntityResult candidateQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
+    public EntityResult seasonQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
         return this.daoHelper.query(this.seasonDao,keyMap,attrList);
     }
 
     @Override
-    public EntityResult candidateInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
+    public EntityResult seasonInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
         return this.daoHelper.insert(this.seasonDao,attrMap);
     }
 
     @Override
-    public EntityResult candidateUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+    public EntityResult seasonUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
         return this.daoHelper.update(this.seasonDao,attrMap,keyMap);
     }
 
     @Override
-    public EntityResult candidateDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+    public EntityResult seasonDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
         return this.daoHelper.delete(this.seasonDao,keyMap);
     }
 
