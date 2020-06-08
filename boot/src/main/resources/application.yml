@@ -14,11 +14,11 @@ ontimize:
             allowedHeaders: "*"
             exposedHeaders: ["X-Auth-Token","Content-disposition","X-Requested-With"]
             allowedMethods:
-            - GET
-            - POST
-            - PUT
-            - OPTIONS
-            - DELETE
+               - GET
+               - POST
+               - PUT
+               - OPTIONS
+               - DELETE
    jdbc:
       nameConvention: upper
       sqlhandler: oracle
@@ -61,7 +61,7 @@ server:
       mime-types: application/json, application/xml
 spring:
    datasource:
-      driver-class-name: org.hsqldb.jdbcDriver
+      driver-class-name: org.postgresql.Driver
       jdbcUrl: jdbc:postgresql://45.84.210.174:65432/cd03
       username: cd03
       password: cd03_P4$$!

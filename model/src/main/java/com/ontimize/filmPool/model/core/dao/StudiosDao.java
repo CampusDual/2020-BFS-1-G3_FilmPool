@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 public class StudiosDao extends OntimizeJdbcDaoSupport {
 
-    public static final String STUDIO_ID = "STUDIO_ID";
-    public static final String STUDIO_NAME = "STUDIO_NAME";
+    public static final String studio_id = "studio_id";
+    public static final String studio_name = "studio_name";
 
 }
