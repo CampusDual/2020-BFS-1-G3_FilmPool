@@ -1,5 +1,4 @@
 package com.ontimize.filmPool.model.core.dao;
-
 import com.ontimize.jee.server.dao.common.ConfigurationFile;
 import com.ontimize.jee.server.dao.jdbc.OntimizeJdbcDaoSupport;
 import org.springframework.context.annotation.Lazy;
