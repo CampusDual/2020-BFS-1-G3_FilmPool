@@ -14,7 +14,7 @@ ontimize:
             allowedHeaders: "*"
             exposedHeaders: ["X-Auth-Token","Content-disposition","X-Requested-With"]
             allowedMethods:
-<<<<<<< HEAD
+
                - GET
                - POST
                - PUT
@@ -22,8 +22,8 @@ ontimize:
                - DELETE
 
    jdbc:
-      nameConvention: upper
-      sqlhandler: oracle
+      nameConvention: lower
+      sqlhandler: postgres
       sqlConditionProcessor:
          uppperString: true
          upperLike: true

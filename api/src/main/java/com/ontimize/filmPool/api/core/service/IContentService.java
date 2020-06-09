@@ -6,10 +6,10 @@ import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
 import java.util.List;
 import java.util.Map;
 
-public interface IContenidosService {
+public interface IContentService {
 
-    public EntityResult contentQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
-    public EntityResult contentInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
-    public EntityResult contentUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
-    public EntityResult contentDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+    public EntityResult contenidoQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
+    public EntityResult contenidoInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
+    public EntityResult contenidoUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+    public EntityResult contenidoDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 }

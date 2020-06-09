@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/contenidos")
+@RequestMapping("/contents")
 public class ContentRestController extends ORestController<IContenidosService> {
 
     @Autowired
