@@ -1,1 +1,0 @@
-{"moduleName":null,"summaries":[{"symbol":{"__symbol":0,"members":[]},"metadata":[{"id":"home","name":"HOME","icon":"home","route":"/main/home"},{"id":"logout","name":"LOGOUT","route":"/login","icon":"power_settings_new","confirm":"yes"}]}],"symbols":[{"__symbol":0,"name":"MENU_CONFIG","filePath":"./app.menu.config"}]}
