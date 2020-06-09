@@ -1,0 +1,1 @@
+{"version":3,"file":"app.menu.config.js","sourceRoot":"","sources":["../../../../src/app/shared/app.menu.config.ts"],"names":[],"mappings":";;AAEa,QAAA,WAAW,GAAmB;IACzC,EAAE,EAAE,EAAE,MAAM,EAAE,IAAI,EAAE,MAAM,EAAE,IAAI,EAAE,MAAM,EAAE,KAAK,EAAE,YAAY,EAAE;IAC/D,EAAE,EAAE,EAAE,QAAQ,EAAE,IAAI,EAAE,QAAQ,EAAE,KAAK,EAAE,QAAQ,EAAE,IAAI,EAAE,oBAAoB,EAAE,OAAO,EAAE,KAAK,EAAE;CAC9F,CAAC"}
