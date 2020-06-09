@@ -20,13 +20,7 @@ ontimize:
                - PUT
                - OPTIONS
                - DELETE
-=======
-            - GET
-            - POST
-            - PUT
-            - OPTIONS
-            - DELETE
->>>>>>> 26277ddd2c127baee4db6e1a714d21eb05a019d2
+
    jdbc:
       nameConvention: upper
       sqlhandler: oracle
@@ -81,8 +75,5 @@ spring:
       store-type: none
    autoconfigure:
       exclude: |
-<<<<<<< HEAD
+
          org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration, org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.FallbackWebSecurityAutoConfiguration
-=======
-         org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration, org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.FallbackWebSecurityAutoConfiguration
->>>>>>> 26277ddd2c127baee4db6e1a714d21eb05a019d2
