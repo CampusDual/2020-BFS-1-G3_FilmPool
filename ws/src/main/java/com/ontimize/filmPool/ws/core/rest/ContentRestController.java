@@ -27,13 +27,14 @@ public class ContentRestController extends ORestController<IContenidosService> {
         return this.iContenidosService;
     }
 
-    @RequestMapping(value = "newMovies/search", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public EntityResult getNewMovies(@RequestBody Map<String, Object> req) {
+    @RequestMapping(value = "/newest", method = RequestMethod.POST,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public EntityResult newContents(@RequestBody Map<String, Object> req) {
         try {
             List<String> columns = (List<String>) req.get("columns");
             Map<String, Object> key = new HashMap<String, Object>();
             key.put(SQLStatementBuilder.ExtendedSQLConditionValuesProcessor.EXPRESSION_KEY,
-                    getNewMovies(ContentDao.));
+                   searchBetween(ContentDao.CONTENT_RELEASE_DATE));
             return iContenidosService.contentQuery(key, columns);
         } catch (Exception e) {
             e.printStackTrace();
@@ -64,7 +65,4 @@ public class ContentRestController extends ORestController<IContenidosService> {
         SQLStatementBuilder.BasicExpression bexp2 = new SQLStatementBuilder.BasicExpression(field, SQLStatementBuilder.BasicOperator.LESS_OP, endDate);
         return new SQLStatementBuilder.BasicExpression(bexp1, SQLStatementBuilder.BasicOperator.AND_OP, bexp2);
     }
-
-
-
 }

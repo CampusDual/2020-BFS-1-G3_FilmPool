@@ -46,15 +46,10 @@ public class ContentService implements IContenidosService {
     public EntityResult newMovies()
             throws OntimizeJEERuntimeException {
         Map<String, Object> keyMap= new HashMap<String, Object>();
-        List<String> attrList = Arrays.asList(contentDao.CONTENIDO_NAME,contentDao.CONTENIDO_DURATION,contentDao.CONTENIDO_ID);
-        return this.daoHelper.query(this.contentDao, keyMap, attrList,"newMovies");
+        List<String> attrList = Arrays.asList(contentDao.CONTENT_NAME,contentDao.CONTENT_DURATION,contentDao.CONTENT_ID);
+        return this.daoHelper.query(this.contentDao, keyMap, attrList);
     }
 
-    public EntityResult newShows()
-            throws OntimizeJEERuntimeException {
-        Map<String, Object> keyMap= new HashMap<String, Object>();
-        List<String> attrList = Arrays.asList(contentDao.CONTENIDO_NAME,contentDao.CONTENIDO_DURATION,contentDao.CONTENIDO_ID);
-        return this.daoHelper.query(this.contentDao, keyMap, attrList,"newShows");
-    }
+
 
 }
