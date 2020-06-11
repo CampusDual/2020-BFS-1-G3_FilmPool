@@ -12,9 +12,21 @@
 	<artifactId>film-pool</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
+
+	<properties>
+		<ontimize.boot.version>2.0.0</ontimize.boot.version>
+		<ontimize.jee.version>2.0.0</ontimize.jee.version>
+		<basicproject.version>0.0.1</basicproject.version>
+		<hsqldatabase.path>src/main/db</hsqldatabase.path>
+		<database.url>jdbc:postgresql://45.84.210.174:65432/cd03</database.url>
+		<hsqldb.version>2.3.4</hsqldb.version>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+	</properties>
+
+
 	<dependencyManagement>
 		<dependencies>
-
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-web</artifactId>
@@ -66,7 +78,8 @@
 
 		</dependencies>
 	</dependencyManagement>
-<modules>  <module>api</module>
+<modules>
+	<module>api</module>
     <module>frontend</module>
     <module>boot</module>
     <module>model</module>
