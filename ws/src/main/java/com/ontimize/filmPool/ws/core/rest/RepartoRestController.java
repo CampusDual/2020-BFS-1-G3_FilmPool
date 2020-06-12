@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/reparto")
-@ComponentScan(basePackageClasses = { com.ontimize.filmPool.api.core.service.IRepartoService.class })
+@ComponentScan(basePackageClasses = {com.ontimize.filmPool.api.core.service.IRepartoService.class})
 public class RepartoRestController extends ORestController<IRepartoService> {
 
     @Autowired
@@ -19,4 +19,5 @@ public class RepartoRestController extends ORestController<IRepartoService> {
     public IRepartoService getService() {
         return this.repartoService;
     }
+
 }

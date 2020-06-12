@@ -12,4 +12,5 @@
         <Column>reparto_id</Column>
     </UpdateKeys>
     <GeneratedKey>reparto_id</GeneratedKey>
+
 </JdbcEntitySetup>

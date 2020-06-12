@@ -13,5 +13,4 @@ public class GenresDao extends OntimizeJdbcDaoSupport {
 
     public static final String ATTR_GENRE_ID = "genre_id";
     public static final String ATTR_GENRE_NAME = "genre_name";
-
 }

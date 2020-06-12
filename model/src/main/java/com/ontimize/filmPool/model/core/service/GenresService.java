@@ -21,7 +21,6 @@ public class GenresService implements IGenresService {
     @Autowired
     private DefaultOntimizeDaoHelper daoHelper;
 
-
     @Override
     public EntityResult genresQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
         return this.daoHelper.query(this.genresDao, keyMap, attrList);

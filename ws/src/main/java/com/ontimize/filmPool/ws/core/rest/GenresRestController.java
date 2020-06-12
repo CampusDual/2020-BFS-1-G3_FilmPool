@@ -19,4 +19,5 @@ public class GenresRestController extends ORestController<IGenresService> {
     public IGenresService getService() {
         return this.genresService;
     }
+
 }

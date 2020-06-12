@@ -13,5 +13,4 @@ public interface IGenresService {
     public EntityResult genresInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
     public EntityResult genresUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
     public EntityResult genresDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
-
 }

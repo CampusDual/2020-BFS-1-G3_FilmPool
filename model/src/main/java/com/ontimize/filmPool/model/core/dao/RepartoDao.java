@@ -17,4 +17,5 @@ public class RepartoDao extends OntimizeJdbcDaoSupport {
     public static final String ATTR_REPARTO_DEAD_DATE = "reparto_dead_date";
     public static final String ATTR_REPARTO_BIRTH_PLACE = "reparto_birth_place";
     public static final String ATTR_REPARTO_NATIONALITY = "reparto_nationality";
+
 }

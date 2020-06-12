@@ -23,7 +23,6 @@ public class RepartoService implements IRepartoService {
     private DefaultOntimizeDaoHelper daoHelper;
 
 
-
     @Override
     public EntityResult repartoQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
         return this.daoHelper.query(this.repartoDao, keyMap, attrList);

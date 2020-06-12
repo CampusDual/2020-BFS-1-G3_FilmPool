@@ -12,4 +12,5 @@
         <Column>genre_id</Column>
     </UpdateKeys>
     <GeneratedKey>genre_id</GeneratedKey>
+
 </JdbcEntitySetup>
