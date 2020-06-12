@@ -12,9 +12,9 @@ import org.springframework.stereotype.Repository;
         configurationFilePlaceholder = "dao/placeholders.properties")
 public class ChapterDao extends OntimizeJdbcDaoSupport {
 
-    public static final String CHAPTER_ID = "shows_chapters_id";
-    public static final String CHAPTER_NUMBER = "chapter_number";
-    public static final String CHAPTER_PLOT = "show_chapter_plot";
-    public static final String SEASON_ID = "shows_season_id";
+    public static final String shows_chapters_id = "shows_chapters_id";
+    public static final String chapter_number = "chapter_number";
+    public static final String show_chapter_plot = "show_chapter_plot";
+    public static final String shows_season_id = "shows_season_id";
 
 }

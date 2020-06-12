@@ -13,6 +13,10 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
 	<properties>
 		<ontimize.boot.version>2.0.0</ontimize.boot.version>
 		<ontimize.jee.version>2.0.0</ontimize.jee.version>
@@ -23,8 +27,11 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> develop
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -63,7 +70,7 @@
 				<artifactId>film-pool-model</artifactId>
 				<version>1.0-SNAPSHOT</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>com.ontimize</groupId>
 				<artifactId>film-pool-ws</artifactId>
@@ -78,6 +85,7 @@
 
 		</dependencies>
 	</dependencyManagement>
+<<<<<<< HEAD
 <modules>
 	<module>api</module>
     <module>frontend</module>
@@ -86,3 +94,13 @@
     <module>ws</module>
   </modules>
 </project>
+=======
+	<modules>
+		<module>api</module>
+		<module>frontend</module>
+		<module>boot</module>
+		<module>model</module>
+		<module>ws</module>
+	</modules>
+</project>
+>>>>>>> develop
