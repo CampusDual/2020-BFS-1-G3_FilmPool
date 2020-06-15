@@ -48,6 +48,16 @@ public class ContentService implements IContentService {
         return this.daoHelper.update(this.contentDao, attrMap, keyMap);
     }
 
+    private Map<String, Object> removeNonRelatedData(Map<String, Object> attrMap, String... attrToExclude) {
+        HashMap<String, Object> data = new HashMap<String, Object>();
+        for (String attr : attrToExclude) {
+            if (attrMap.containsKey(attr) && attrMap.get(attr) instanceof String) {
+                data.put(attr, attrMap.remove(attr));
+            }
+        }
+        return data;
+    }
+
     public EntityResult contentDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
         return this.daoHelper.delete(this.contentDao, keyMap);
     }
@@ -64,35 +74,24 @@ public class ContentService implements IContentService {
         return this.daoHelper.query(this.contentDao, keyMap, columns, "latestShows");
     }
 
-
-    private void Map<String, Object> java.util.Map<String,Object> insertNonRelatedData(Map<String, Object> nonContentData) throws OntimizeJEERuntimeException {
+    private void insertNonRelatedData(Map<String, Object> nonContentData) throws OntimizeJEERuntimeException {
         for (java.util.Map.Entry<String, Object> entry : nonContentData.entrySet()) {
             Map<String, Object> data = new HashMap<String, Object>();
             List<String> attr = new ArrayList<String>();
             EntityResult toret, query;
             switch (entry.getKey()) {
                 case ContentDao.STUDIO_ID:
-                    data.put(StudioDao.STUDIO_NAME, entry.getValue());
-                    attr.add(StudioDao.STUDIO_ID);
+                    data.put((String) StudioDao.STUDIO_NAME, entry.getValue());
+                    attr.add((String) StudioDao.STUDIO_ID);
                     query = this.contentService.studioQuery(data, attr);
                     if (query.calculateRecordNumber() > 0) {
-                        entry.setValue(query.getRecordValues(0).get(StudioDao.STUDIO_ID));
+                        entry.setValue((Object) query.getRecordValues(0).get(StudioDao.STUDIO_ID));
                     } else {
                         toret = this.contentService.studioInsert(data);
-                        entry.setValue(toret.get(StudioDao.STUDIO_ID));
+                        entry.setValue((Object) toret.get(StudioDao.STUDIO_ID));
                     }
                     break;
             }
-    }
-
-    private Map<String, Object> removeNonRelatedData(Map<String, Object> attrMap, String... attrToExclude) {
-        HashMap<String, Object> data = new HashMap<String, Object>();
-        for (String attr : attrToExclude) {
-            if (attrMap.containsKey(attr) && attrMap.get(attr) instanceof String) {
-                data.put(attr, attrMap.remove(attr));
-            }
         }
-        return data;
     }
-
 }
