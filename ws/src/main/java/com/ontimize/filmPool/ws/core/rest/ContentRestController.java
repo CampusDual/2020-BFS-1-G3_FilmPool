@@ -27,9 +27,9 @@ public class ContentRestController extends ORestController<IContenidosService> {
         return this.iContenidosService;
     }
 
-    @RequestMapping(value = "/newest", method = RequestMethod.POST,
+    @RequestMapping(value = "/latestMovies", method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public EntityResult newContents(@RequestBody Map<String, Object> req) {
+    public EntityResult latestMovies(@RequestBody Map<String, Object> req) {
         try {
             List<String> columns = (List<String>) req.get("columns");
             Map<String, Object> key = new HashMap<String, Object>();
@@ -42,6 +42,25 @@ public class ContentRestController extends ORestController<IContenidosService> {
             res.setCode(EntityResult.OPERATION_WRONG);
             return res;
         }
+
+    }
+
+    @RequestMapping(value = "/latestShows", method = RequestMethod.POST,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public EntityResult latestShows(@RequestBody Map<String, Object> req) {
+        try {
+            List<String> columns = (List<String>) req.get("columns");
+            Map<String, Object> key = new HashMap<String, Object>();
+            key.put(SQLStatementBuilder.ExtendedSQLConditionValuesProcessor.EXPRESSION_KEY,
+                    searchBetween(ContentDao.CONTENT_RELEASE_DATE));
+            return iContenidosService.contentQuery(key, columns);
+        } catch (Exception e) {
+            e.printStackTrace();
+            EntityResult res = new EntityResult();
+            res.setCode(EntityResult.OPERATION_WRONG);
+            return res;
+        }
+
     }
 
     private SQLStatementBuilder.BasicExpression searchBetween(String param) {

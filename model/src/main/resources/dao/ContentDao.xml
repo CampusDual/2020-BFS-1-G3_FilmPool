@@ -12,4 +12,13 @@
         <Column>CONTENT_ID</Column>
     </UpdateKeys>
     <GeneratedKey>CONTENT_ID</GeneratedKey>
+    <Queries>
+        <Query id="latestMovies">
+            <Sentence><![CDATA[select #COLUMNS# from contenido
+            #WHERE#
+            order by contenido_fecha_estreno desc limit 10]]>
+
+            </Sentence>
+        </Query>
+    </Queries>
 </JdbcEntitySetup>
