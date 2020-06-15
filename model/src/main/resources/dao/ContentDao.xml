@@ -16,9 +16,12 @@
         <Query id="latestMovies">
             <Sentence><![CDATA[select #COLUMNS# from contenido
             #WHERE#
-            order by contenido_fecha_estreno desc limit 10]]>
-
-            </Sentence>
+            order by contenido_fecha_estreno desc limit 10]]></Sentence>
+        </Query>
+        <Query id="latestShows">
+            <Sentence><![CDATA[select #COLUMNS# from contenido
+            #WHERE#
+            order by contenido_fecha_estreno desc limit 10]]></Sentence>
         </Query>
     </Queries>
 </JdbcEntitySetup>

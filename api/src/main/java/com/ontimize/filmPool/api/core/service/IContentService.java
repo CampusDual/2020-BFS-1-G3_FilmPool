@@ -12,6 +12,6 @@ public interface IContentService {
     public EntityResult contentInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
     public EntityResult contentUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
     public EntityResult contentDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
-    public EntityResult latestMovies() throws OntimizeJEERuntimeException;
-    public EntityResult latestShows() throws OntimizeJEERuntimeException;
+    public EntityResult latestMovies(List<String> columns) throws OntimizeJEERuntimeException;
+    public EntityResult latestShows(List<String> columns) throws OntimizeJEERuntimeException;
 }
