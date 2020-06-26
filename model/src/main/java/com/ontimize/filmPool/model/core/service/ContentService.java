@@ -4,6 +4,8 @@ import com.ontimize.db.EntityResult;
 import com.ontimize.filmPool.api.core.service.IContentService;
 import com.ontimize.filmPool.model.core.dao.ContentDao;
 import com.ontimize.filmPool.model.core.dao.StudioDao;
+import com.ontimize.filmPool.model.core.dao.GenresDao;
+import com.ontimize.filmPool.model.core.dao.RepartoDao;
 import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
 import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -88,6 +90,17 @@ public class ContentService implements IContentService {
                         entry.setValue((Object) query.getRecordValues(0).get(StudioDao.STUDIO_ID));
                     } else {
                         toret = this.contentService.studioInsert(data);
+                        entry.setValue((Object) toret.get(StudioDao.STUDIO_ID));
+                    }
+                    break;
+                case ContentDao.GENRE_ID:
+                    data.put((String) StudioDao.STUDIO_NAME, entry.getValue());
+                    attr.add((String) StudioDao.STUDIO_ID);
+                    query = this.contentService.genresQuery(data, attr);
+                    if (query.calculateRecordNumber() > 0) {
+                        entry.setValue((Object) query.getRecordValues(0).get(StudioDao.STUDIO_ID));
+                    } else {
+                        toret = this.contentService.genresInsert(data);
                         entry.setValue((Object) toret.get(StudioDao.STUDIO_ID));
                     }
                     break;
