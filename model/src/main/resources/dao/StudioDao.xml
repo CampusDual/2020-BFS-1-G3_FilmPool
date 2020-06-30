@@ -3,14 +3,13 @@
         xmlns="http://www.ontimize.com/schema/jdbc"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.ontimize.com/schema/jdbc http://www.ontimize.com/schema/jdbc/ontimize-jdbc-dao.xsd"
-        catalog="" schema="${mainschema}" table="genres"
+        catalog="" schema="${mainschema}" table="studios"
         datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
     <DeleteKeys>
-        <Column>genre_id</Column>
+        <Column>STUDIO_ID</Column>
     </DeleteKeys>
     <UpdateKeys>
-        <Column>genre_id</Column>
+        <Column>STUDIO_ID</Column>
     </UpdateKeys>
-    <GeneratedKey>genre_id</GeneratedKey>
-
+    <GeneratedKey>STUDIO_ID</GeneratedKey>
 </JdbcEntitySetup>
