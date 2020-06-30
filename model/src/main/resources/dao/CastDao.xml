@@ -3,14 +3,14 @@
         xmlns="http://www.ontimize.com/schema/jdbc"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.ontimize.com/schema/jdbc http://www.ontimize.com/schema/jdbc/ontimize-jdbc-dao.xsd"
-        catalog="" schema="${mainschema}" table="reparto"
+        catalog="" schema="${mainschema}" table="cast"
         datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
     <DeleteKeys>
-        <Column>reparto_id</Column>
+        <Column>cast_id</Column>
     </DeleteKeys>
     <UpdateKeys>
-        <Column>reparto_id</Column>
+        <Column>cast_id</Column>
     </UpdateKeys>
-    <GeneratedKey>reparto_id</GeneratedKey>
+    <GeneratedKey>cast_id</GeneratedKey>
 
 </JdbcEntitySetup>
