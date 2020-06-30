@@ -12,10 +12,6 @@ target
 # User-specific stuff
 .idea/
 
-templateDB.lck
-templateDB.script
-
-
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -41,7 +37,7 @@ out/
 # JIRA plugin
 atlassian-ide-plugin.xml
 
-
+*package-lock.json
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
