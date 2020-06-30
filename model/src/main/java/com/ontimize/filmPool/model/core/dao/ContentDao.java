@@ -15,7 +15,7 @@ public class ContentDao extends OntimizeJdbcDaoSupport {
     public static final String CONTENT_ID = "content_id";
     public static final String CONTENT_NAME = "content_name";
     public static final String CONTENT_DURATION = "content_duration";
-    public static final String CONTENT_NACIONALITY = "content_nationality";
+    public static final String CONTENT_NATIONALITY = "content_nationality";
     public static final String CONTENT_RELEASE_DATE = "content_release_date";
     public static final String STUDIO_ID = "studio_id";
     public static final String GENRE_ID = "genre_id";
