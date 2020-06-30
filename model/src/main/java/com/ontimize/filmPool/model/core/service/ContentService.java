@@ -3,15 +3,11 @@ package com.ontimize.filmPool.model.core.service;
 import com.ontimize.db.EntityResult;
 import com.ontimize.filmPool.api.core.service.IContentService;
 import com.ontimize.filmPool.model.core.dao.ContentDao;
-import com.ontimize.filmPool.model.core.dao.StudioDao;
-import com.ontimize.filmPool.model.core.dao.GenresDao;
-import com.ontimize.filmPool.model.core.dao.RepartoDao;
 import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
 import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
