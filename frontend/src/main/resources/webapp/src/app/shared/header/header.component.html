@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        </button>
+        <h1>Film Pool</h1>
+        <span class="menu-spacer"></span>
+        <div>
+            <a mat-button [routerLink]="'/main/home'"> Inicio </a>
+            <a mat-button [routerLink]="'/main/movies'"> Películas </a>
+            <a mat-button [routerLink]="'/main/shows'"> Series </a>
+            <a mat-button [routerLink]="'/main/releases'"> Estrenos </a>
+        </div>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row>
+        <span style="font-size: 12px;">Tu página de confianza!</span>
+    </mat-toolbar-row>
+</mat-toolbar>
