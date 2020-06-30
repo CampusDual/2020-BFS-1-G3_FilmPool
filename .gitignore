@@ -12,6 +12,8 @@ target
 # User-specific stuff
 .idea/
 
+templateDB.lck
+templateDB.script
 
 
 

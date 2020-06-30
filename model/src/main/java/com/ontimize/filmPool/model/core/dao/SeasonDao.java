@@ -11,9 +11,9 @@ import org.springframework.stereotype.Repository;
         configurationFilePlaceholder = "dao/placeholders.properties")
 public class SeasonDao extends OntimizeJdbcDaoSupport {
 
-    public static final String show_season_id = "show_season_id";
+    public static final String season_id = "season_id";
     public static final String season_number = "season_number";
-    public static final String show_season_plot = "show_season_plot";
+    public static final String season_plot = "season_plot";
     public static final String show_id = "show_id";
 
 }
