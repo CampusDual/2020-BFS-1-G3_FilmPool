@@ -24,5 +24,6 @@ public class ContentDao extends OntimizeJdbcDaoSupport {
     public static final String CONTENT_TOTAL_VOTE = "content_total_vote";
     public static final String CONTENT_TOTAL_RATING = "content_total_rating";
     public static final String DIRECTOR_ID = "director_id";
-
+    public static final String CONTENT_TRAILER = "content_trailer";
+    public static final String CONTENT_TYPE = "content_type";
 }
