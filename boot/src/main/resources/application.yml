@@ -15,11 +15,11 @@ ontimize:
             exposedHeaders: ["X-Auth-Token","Content-disposition","X-Requested-With"]
             allowedMethods:
 
-               - GET
-               - POST
-               - PUT
-               - OPTIONS
-               - DELETE
+               -GET
+               -POST
+               -PUT
+               -OPTIONS
+               -DELETE
 
    jdbc:
       nameConvention: lower
