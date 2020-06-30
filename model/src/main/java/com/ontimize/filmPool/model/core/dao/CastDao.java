@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository("RepartoDao")
 @Lazy
-@ConfigurationFile(configurationFile = "dao/RepartoDao.xml", configurationFilePlaceholder = "dao/placeholders.properties")
+@ConfigurationFile(configurationFile = "dao/CastDao.xml", configurationFilePlaceholder = "dao/placeholders.properties")
 public class RepartoDao extends OntimizeJdbcDaoSupport {
 
     public static final String ATTR_REPARTO_ID = "reparto_id";
