@@ -53,5 +53,33 @@ public class ContentRestController extends ORestController<IContentService> {
         }
     }
 
+    @RequestMapping(value = "/bestMoviesRating", method = RequestMethod.POST,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public EntityResult bestMoviesRatingContents(@RequestBody Map<String, Object> req) {
+        try {
+            List<String> columns = (List<String>) req.get("columns");
+            return iContentService.bestMoviesRating(columns);
+        } catch (Exception e) {
+            e.printStackTrace();
+            EntityResult res = new EntityResult();
+            res.setCode(EntityResult.OPERATION_WRONG);
+            return res;
+        }
+    }
+
+    @RequestMapping(value = "/bestShowsRating", method = RequestMethod.POST,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public EntityResult bestShowsRatingContents(@RequestBody Map<String, Object> req) {
+        try {
+            List<String> columns = (List<String>) req.get("columns");
+            return iContentService.bestShowsRating(columns);
+        } catch (Exception e) {
+            e.printStackTrace();
+            EntityResult res = new EntityResult();
+            res.setCode(EntityResult.OPERATION_WRONG);
+            return res;
+        }
+    }
+
 
 }
