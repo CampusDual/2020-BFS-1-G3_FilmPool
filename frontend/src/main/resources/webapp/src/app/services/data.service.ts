@@ -13,7 +13,7 @@ export class DataService {
     })
   }
 
-  public URL_API = "http://localhost:33333/contents/content?columns=content_name"
+  public URL_API = "http://localhost:33333/contents/content?columns=content_name,content_id"
   constructor(private http:HttpClient) { }
 
   getAllContent(): Observable<any[]>{
