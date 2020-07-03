@@ -16,6 +16,10 @@ import {OntimizeWebModule} from "ontimize-web-ngx";
     SharedModule,
     OntimizeWebModule
   ],
-  declarations: [MovieDetailsComponent, MoviePosterComponent, MovieTrailerComponent,MoviesHomeComponent]
+  declarations: [
+    MovieDetailsComponent, 
+    MoviePosterComponent, 
+    MovieTrailerComponent,
+    MoviesHomeComponent]
 })
 export class MoviesModule { }

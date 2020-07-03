@@ -1,3 +1,33 @@
-<p>
-  movie-details works!
-</p>
+<o-form service="contents" entity="content" keys="content_id" keys-sql-types="INTEGER" show-header="no" show-header-navigation="no">
+<o-row layout-align="center">
+  <o-integer-input attr="content_id" sql-type="INTEGER" enabled="no"></o-integer-input>
+  <o-text-input attr="content_name"  enabled="no" sql-type="VARCHAR"></o-text-input>
+</o-row>
+
+<o-row layout-align="center">
+  <h4>Sinopsis:</h4><br>
+  <br><o-text-input attr="content_plot" enabled="no" sql-type="VARCHAR"></o-text-input>
+
+</o-row>
+
+
+<o-row layout-align="center">
+  <h4>Reparto:</h4>
+  <br><app-cast></app-cast>
+</o-row>
+
+<o-row>
+      <o-image attr="content_poster_path" width="150px" height="150px" show-controls="false" style="margin-top: 8px;" empty-image="assets/images/no-image.png" sql-type="OTHER"></o-image>
+</o-row>
+<o-row>
+    <o-date-input attr="content_release_date" fxFlex="20" read-only="yes"></o-date-input>
+
+</o-row>
+<o-row layout-align="center">
+  <h4>Trailer:</h4>
+</o-row>
+<o-row layout-align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/c_dNIXwrbzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+</o-row>
+
+</o-form>

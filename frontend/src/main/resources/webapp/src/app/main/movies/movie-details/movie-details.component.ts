@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CastComponent } from 'app/shared/cast/cast.component';
 
 @Component({
   selector: 'app-movie-details',
@@ -11,5 +12,7 @@ export class MovieDetailsComponent implements OnInit {
 
   ngOnInit() {
   }
+
+
 
 }
