@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from "../../../services/data.service";
 
 @Component({
   selector: 'app-shows-home',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowsHomeComponent implements OnInit {
 
-  constructor() { }
+  public series = [];
 
-  ngOnInit() {
+  constructor(private dataService: DataService) {
   }
 
+  ngOnInit() {
+    this.getNewMovies()
+  }
+
+  getNewMovies() {
+    this.dataService.getUltimasSeries().subscribe(response => {
+      response["data"].forEach(e => {
+        this.series.push(e)
+      })
+    })
+  }
 }

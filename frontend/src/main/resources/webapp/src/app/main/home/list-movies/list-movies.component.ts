@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from "../../../services/data.service";
 
 @Component({
   selector: 'app-list-movies',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListMoviesComponent implements OnInit {
 
-  constructor() { }
+  public peliculas = [];
+  constructor(private dataService : DataService) { }
 
   ngOnInit() {
+    this.getNewMovies()
+  }
+  getNewMovies(){
+    this.dataService.getMejoresPeliculas().subscribe(response =>{
+      response["data"].forEach(e=>{
+        this.peliculas.push(e)
+      })
+    })
   }
 
 }

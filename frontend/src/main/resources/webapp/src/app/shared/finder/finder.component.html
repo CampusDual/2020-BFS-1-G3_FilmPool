@@ -1,3 +1,18 @@
-<p>
-  finder works!
-</p>
+<div class="container">
+  <ng-autocomplete
+  [data]="data$"
+  [searchKeyword]="keyword"
+  [itemTemplate]="itemTemplate"
+  [notFoundTemplate]="notFoundTemplate"
+  [notFoundText]="notFound"
+  (selected)="onSelected($event)"
+  placeHolder="Introduce titulo.."
+  >
+  </ng-autocomplete>
+  <ng-template #itemTemplate let-item>
+    <a [innerHTML]="item.content_name"></a>
+  </ng-template>
+  <ng-template #notFoundTemplate let-notFound>
+    <div [innerHTML]="notFound"></div>
+  </ng-template>
+</div>
