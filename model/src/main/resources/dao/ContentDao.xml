@@ -23,5 +23,15 @@
             where content_type = 0
             order by content_release_date desc limit 9]]></Sentence>
         </Query>
+        <Query id="bestMoviesRating">
+            <Sentence><![CDATA[select #COLUMNS# from content
+            WHERE content_type = 1
+            order by content_total_rating desc limit 6]]></Sentence>
+        </Query>
+        <Query id="bestShowsRating">
+            <Sentence><![CDATA[select #COLUMNS# from content
+            WHERE content_type = 0
+            order by content_total_rating desc limit 6]]></Sentence>
+        </Query>
     </Queries>
 </JdbcEntitySetup>

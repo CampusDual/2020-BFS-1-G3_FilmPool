@@ -14,4 +14,7 @@ public interface IContentService {
     public EntityResult contentDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
     public EntityResult latestMovies(List<String> columns) throws OntimizeJEERuntimeException;
     public EntityResult latestShows(List<String> columns) throws OntimizeJEERuntimeException;
+    public EntityResult bestMoviesRating(List<String> columns) throws OntimizeJEERuntimeException;
+    public EntityResult bestShowsRating(List<String> columns) throws OntimizeJEERuntimeException;
+
 }
