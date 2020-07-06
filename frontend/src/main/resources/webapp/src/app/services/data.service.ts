@@ -14,7 +14,7 @@ export class DataService {
   }
 
     public urlBuscador = "http://localhost:33333/contents/content?columns=content_name,content_id"
-  public urlMejoresPeliculas = "http://localhost:33333/contents/latestMovies?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
+    public urlMejoresPeliculas = "http://localhost:33333/contents/latestMovies?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
     public urlMejoresSeries = "http://localhost:33333/contents/latestShows?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
     public urlUltimasPeliculas = "http://localhost:33333/contents/latestMovies?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
     public urlUltimasSeries = "http://localhost:33333/contents/latestShows?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"

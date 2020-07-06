@@ -22,11 +22,14 @@ import {AutocompleteLibModule} from "angular-ng-autocomplete";
   FinderComponent,
   CastComponent,
   RatingComponent],
+
     exports: [
         CommonModule,
         HeaderComponent,
         FooterComponent,
+        CastComponent,
         FinderComponent
     ]
+
 })
 export class SharedModule { }

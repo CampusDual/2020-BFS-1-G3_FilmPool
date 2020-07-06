@@ -1,3 +1,43 @@
-<p>
-    movie-details works!
-</p>
+<o-form service="contents" entity="content" keys="content_id" keys-sql-types="INTEGER" show-header="no" show-header-navigation="no">
+<o-row layout-align="left">
+  <div class="foto">
+    <o-image attr="content_poster_path" width="300px" height="300px" show-controls="false" style="margin-top: 8px;" empty-image="assets/images/no-image.png" sql-type="OTHER" label-visible="no"></o-image>
+    
+    <div class="fecha_estreno">
+    <o-row>
+      <h5>Fecha estreno:&nbsp;</h5><o-date-input attr="content_release_date" fxFlex="35" read-only="yes" label-visible="no"></o-date-input>
+    </o-row> 
+    
+    </div>
+  </div> 
+    <o-column>
+      <div class="sinopsis">
+    <o-text-input attr="content_name" sql-type="VARCHAR" label-visible="no" read-only="yes"></o-text-input>
+        <h4>Sinopsis:</h4>
+        <o-textarea-input attr="content_plot" label-visible="no"  rows="10"  read-only="yes"></o-textarea-input>
+        </div>
+        
+    </o-column>
+
+</o-row>
+
+<div class="reparto">
+<o-row layout-align="center">
+  <h4>Reparto:</h4>
+  <app-cast></app-cast>
+</o-row>
+</div>
+<o-row>
+
+</o-row>
+
+<div class="trailer">
+<o-row layout-align="center">
+  <h4>Trailer:</h4>
+</o-row>
+<o-row layout-align="center">
+    <o-text-input attr="content_trailer" enabled="no" sql-type="VARCHAR" #trailer ></o-text-input>
+  <!--iframe width="560" height="315" [src]="source" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe-->
+</o-row>
+</div>
+</o-form>
