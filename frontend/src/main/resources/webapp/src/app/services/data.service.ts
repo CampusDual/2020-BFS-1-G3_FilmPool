@@ -15,7 +15,9 @@ export class DataService {
 
   public urlBuscador = "http://localhost:33333/contents/content?columns=content_name,content_id"
   public urlUltimasPeliculas = "http://localhost:33333/contents/latestMovies?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
-  constructor(private http:HttpClient) { }
+    public urlUltimasSeries = "http://localhost:33333/contents/latestShows?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
+
+    constructor(private http:HttpClient) { }
 
   getBuscador(): Observable<any[]>{
     return this.http.get<any>(this.urlBuscador, this.httOptions)
@@ -27,4 +29,11 @@ export class DataService {
     }
     return this.http.post<any>(this.urlUltimasPeliculas,postBody, this.httOptions);
   }
+    getUltimasSeries() : Observable<any[]>{
+        const postBody = {"columns": [
+                "content_name","content_id","content_poster_path","content_total_rating","content_total_vote","content_plot","content_release_date"
+            ]
+        }
+        return this.http.post<any>(this.urlUltimasSeries,postBody, this.httOptions);
+    }
 }
