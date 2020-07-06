@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from "../../../services/data.service";
 
 @Component({
   selector: 'app-list-shows',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListShowsComponent implements OnInit {
 
-  constructor() { }
+  public series = [];
+  constructor(private dataService : DataService) { }
 
   ngOnInit() {
+    this.getNewMovies()
   }
-
+  getNewMovies(){
+    this.dataService.getMejoresSeries().subscribe(response =>{
+      response["data"].forEach(e=>{
+        this.series.push(e)
+      })
+    })
+  }
 }
