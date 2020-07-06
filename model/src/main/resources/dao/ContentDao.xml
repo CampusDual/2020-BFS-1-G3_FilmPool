@@ -15,7 +15,7 @@
     <Queries>
         <Query id="latestMovies">
             <Sentence><![CDATA[select #COLUMNS# from content
-            #WHERE# content_type = 1
+            where content_type = 1
             order by content_release_date desc limit 10]]></Sentence>
         </Query>
         <Query id="latestShows">
