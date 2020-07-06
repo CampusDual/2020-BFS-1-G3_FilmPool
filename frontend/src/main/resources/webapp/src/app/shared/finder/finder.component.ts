@@ -21,7 +21,7 @@ export class FinderComponent implements OnInit {
   }
 
   getData(){
-     this.dataService.getAllContent().subscribe(response =>{
+     this.dataService.getBuscador().subscribe(response =>{
       response["data"].forEach(content=>{
         this.data$.push(content);
       })
