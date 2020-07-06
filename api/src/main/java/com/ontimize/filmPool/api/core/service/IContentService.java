@@ -17,8 +17,4 @@ public interface IContentService {
     public EntityResult bestMoviesRating(List<String> columns) throws OntimizeJEERuntimeException;
     public EntityResult bestShowsRating(List<String> columns) throws OntimizeJEERuntimeException;
 
-
-
- //   public EntityResult bestMoviesRating2(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
-
 }
