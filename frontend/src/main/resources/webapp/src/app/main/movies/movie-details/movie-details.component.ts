@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { CastComponent } from 'app/shared/cast/cast.component';
 
 @Component({
@@ -11,7 +11,11 @@ export class MovieDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+
   }
+
+
 
 
 
