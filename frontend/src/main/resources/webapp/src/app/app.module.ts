@@ -10,7 +10,8 @@ import {
 import { CONFIG } from './app.config';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import {AutocompleteLibModule} from "angular-ng-autocomplete";
+import {HttpClientModule} from "@angular/common/http";
 // Standard providers...
 // Defining custom providers (if needed)...
 export const customProviders: any = [
@@ -20,7 +21,9 @@ export const customProviders: any = [
   imports: [
     ONTIMIZE_MODULES,
     OntimizeWebModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AutocompleteLibModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent

@@ -7,12 +7,14 @@ import { FinderComponent } from './finder/finder.component';
 import { CastComponent } from './cast/cast.component';
 import { RatingComponent } from './rating/rating.component';
 import {RouterModule} from "@angular/router";
+import {AutocompleteLibModule} from "angular-ng-autocomplete";
 
 
 @NgModule({
     imports: [
         OntimizeWebModule,
-        RouterModule
+        RouterModule,
+        AutocompleteLibModule
     ],
   declarations: [
   HeaderComponent,
@@ -20,10 +22,11 @@ import {RouterModule} from "@angular/router";
   FinderComponent,
   CastComponent,
   RatingComponent],
-  exports: [
-    CommonModule,
-    HeaderComponent,
-    FooterComponent,
-  ]
+    exports: [
+        CommonModule,
+        HeaderComponent,
+        FooterComponent,
+        FinderComponent
+    ]
 })
 export class SharedModule { }
