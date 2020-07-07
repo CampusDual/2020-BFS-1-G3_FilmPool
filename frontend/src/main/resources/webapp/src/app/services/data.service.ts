@@ -14,11 +14,11 @@ export class DataService {
   }
 
     public urlBuscador = "http://localhost:33333/contents/content?columns=content_name,content_id"
-    public urlMejoresPeliculas = "http://localhost:33333/contents/latestMovies?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
-    public urlMejoresSeries = "http://localhost:33333/contents/latestShows?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
+    public urlMejoresPeliculas = "http://localhost:33333/contents/bestMoviesRating?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
+    public urlMejoresSeries = "http://localhost:33333/contents/bestShowsRating?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
     public urlUltimasPeliculas = "http://localhost:33333/contents/latestMovies?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
     public urlUltimasSeries = "http://localhost:33333/contents/latestShows?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
-
+    public urlContByid = "http://localhost:33333/contents/content/search"
     constructor(private http:HttpClient) { }
 
     getBuscador(): Observable<any[]>{
@@ -40,7 +40,7 @@ export class DataService {
     }
     getMejoresPeliculas() : Observable<any[]>{
         const postBody = {"columns": [
-                "content_name","content_id","content_poster_path","content_total_rating","content_total_vote","content_plot","content_release_date"
+                "content_name","content_id","content_poster_path","content_total_rating", "content_total_vote","content_plot", "content_release_date"
             ]
         }
         return this.http.post<any>(this.urlMejoresPeliculas,postBody, this.httOptions);
@@ -51,5 +51,19 @@ export class DataService {
             ]
         }
         return this.http.post<any>(this.urlMejoresSeries,postBody, this.httOptions);
+    }
+    getContByid(content_id : Number) : Observable<any[]>{
+        const postBody = {
+            "filter": {
+                "content_id": +content_id
+            },
+            "columns": [
+                "content_name","content_id","content_poster_path","content_total_rating",
+                "content_total_vote","content_plot",
+                "content_release_date","content_trailer","content_nationality","content_type",
+                "content_duration"
+            ]
+        }
+        return this.http.post<any>(this.urlContByid,postBody, this.httOptions);
     }
 }
