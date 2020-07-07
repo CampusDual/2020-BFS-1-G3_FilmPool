@@ -1,4 +1,4 @@
-<o-form service="contents" entity="content" keys="content_id" keys-sql-types="INTEGER" show-header="no" show-header-navigation="no">
+<!--o-form-- service="contents" entity="content" keys="content_id" keys-sql-types="INTEGER" show-header="no" show-header-navigation="no">
 <o-row layout-align="left">
   <div class="foto">
     <o-image attr="content_poster_path" width="300px" height="300px" show-controls="false" style="margin-top: 8px;" empty-image="assets/images/no-image.png" sql-type="OTHER" label-visible="no"></o-image>
@@ -37,7 +37,31 @@
 </o-row>
 <o-row layout-align="center">
     <o-text-input attr="content_trailer" enabled="no" sql-type="VARCHAR" #trailer ></o-text-input>
-  <!--iframe width="560" height="315" [src]="source" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe-->
+  <iframe width="560" height="315" [src]="source" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
 </o-row>
 </div>
-</o-form>
+</o-form-->
+<div id="container-cell">
+    <h1 fxLayout="row">{{content.content_name}}</h1>
+     <div fxLayout="row">
+         <div id="left-column" fxLayout="column" fxFlex="50%">
+            <dl>
+                <dt>Título: </dt><dd>{{content.content_name}}</dd>
+                <dt>Fecha de estreno: </dt><dd>{{content.content_release_date | date}}</dd>
+                <dt>País de origen: </dt><dd>{{content.content_nationality}}</dd>
+                <dt>Sinopsis: </dt><dd>{{content.content_plot}}</dd>
+                <dt *ngIf="content.content_type===0">Capítulos: </dt><dd *ngIf="content.content_type===0">{{content.content_duration}}</dd>
+                <dt *ngIf="content.content_type===1">Duración: </dt><dd *ngIf="content.content_type===1">{{content.content_duration}} minutos</dd>
+                <div class="valoracion">
+                    <dt>Valoración:     </dt><dd>{{content.content_total_rating}} <i class="material-icons">star</i></dd>
+                </div>
+            </dl>
+         </div>
+         <div id="right-column" fxFlex="50%">
+             <div class="frame">
+                 <img src="{{content.content_poster_path}}" alt="" >
+             </div>
+         </div>
+    </div>
+</div>
+
