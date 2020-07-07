@@ -13,4 +13,5 @@ public interface ICastService {
     public EntityResult castInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
     public EntityResult castUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
     public EntityResult castDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+    public EntityResult castByContentIdQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
 }

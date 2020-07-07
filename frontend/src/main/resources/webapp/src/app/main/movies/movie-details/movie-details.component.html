@@ -9,6 +9,7 @@
                 <dt>Sinopsis: </dt><dd>{{content.content_plot}}</dd>
                 <dt *ngIf="content.content_type===0">Capítulos: </dt><dd *ngIf="content.content_type===0">{{content.content_duration}}</dd>
                 <dt *ngIf="content.content_type===1">Duración: </dt><dd *ngIf="content.content_type===1">{{content.content_duration}} minutos</dd>
+                <dt *ngIf="cast.length>0">Reparto: </dt> <dd *ngFor="let actor of cast">{{actor.cast_name}}</dd>
                 <div class="valoracion">
                     <dt>Valoración:     </dt><dd>{{content.content_total_rating}} <i class="material-icons">star</i></dd>
                 </div>

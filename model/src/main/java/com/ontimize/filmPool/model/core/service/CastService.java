@@ -42,4 +42,9 @@ public class CastService implements ICastService {
     public EntityResult castDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
         return this.daoHelper.delete(this.castDao, keyMap);
     }
+
+    @Override
+    public EntityResult castByContentIdQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException {
+        return this.daoHelper.query(this.castDao, keyMap, attrList,"castByContentId");
+    }
 }

@@ -12,5 +12,18 @@
         <Column>cast_id</Column>
     </UpdateKeys>
     <GeneratedKey>cast_id</GeneratedKey>
+    <Queries>
+        <Query id="castByContentId">
+            <Sentence>
+                <![CDATA[
+               SELECT
+                  #COLUMNS#
+                from "cast" c
+                inner join content_actors  ca on ca.actor_id = c.cast_id
+                    #WHERE#
 
+            ]]>
+            </Sentence>
+        </Query>
+    </Queries>
 </JdbcEntitySetup>
