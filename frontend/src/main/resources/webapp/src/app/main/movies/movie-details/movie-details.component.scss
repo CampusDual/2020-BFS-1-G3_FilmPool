@@ -1,15 +1,21 @@
 h1{
     text-align: center;
 }
-dt {
+.dt-single {
     float: left;
     clear: left;
     margin-right: 5px;
     font-weight: bold;
 }
 
-dd {
+.dd-simple {
     margin-left: 0px;
+}
+.dt-cast{
+    font-weight: bold;
+}
+.dd-cast{
+    cursor: pointer;
 }
 .frame{
     border-radius: 20px;
@@ -34,4 +40,9 @@ img {
 }
 .container-cell{
     margin-left: 10px;
+}
+.imgFlag{
+    margin-left: 5px;
+    width: 14px;
+    height: 12px;
 }

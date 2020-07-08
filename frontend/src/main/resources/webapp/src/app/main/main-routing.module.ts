@@ -7,6 +7,7 @@ import { HomeModule } from './home/home.module';
 import {MoviesModule} from "./movies/movies.module";
 import {ShowsModule} from "./shows/shows.module";
 import {ReleasesModule} from "./releases/releases.module";
+import {CastModule} from "./cast/cast.module";
 
 export function loadHomeModule() {
   return HomeModule;
@@ -19,6 +20,9 @@ export function loadShowsModule() {
 }
 export function loadReleasesModule() {
   return ReleasesModule
+}
+export function loadCastModule() {
+  return CastModule
 }
 
 export const routes: Routes = [
@@ -43,6 +47,10 @@ export const routes: Routes = [
       {
         path: 'releases',
         loadChildren: loadReleasesModule
+      },
+      {
+        path: 'cast',
+        loadChildren: loadCastModule
       }
     ]
   }
