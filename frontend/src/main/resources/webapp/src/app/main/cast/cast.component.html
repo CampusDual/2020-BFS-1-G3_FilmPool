@@ -1,0 +1,34 @@
+<div class="container-cell">
+  <h1 fxLayout="row">{{cast.cast_name}}</h1>
+  <div fxLayout="row">
+    <div id="left-column" fxLayout="column" fxFlex="50%">
+      <dl>
+        <dt class="dt-single">Nombre: </dt><dd class="dd-simple">{{cast.cast_name}}</dd>
+        <dt class="dt-single">Fecha de nacimiento: </dt><dd class="dd-simple">{{cast.cast_birth_date | date}}</dd>
+        <dt class="dt-single" *ngIf="cast.cast_dead_date != null">Fecha de defunción: </dt><dd class="dd-simple" *ngIf="cast.cast_dead_date != null">{{cast.cast_dead_date | date}}</dd>
+        <dt class="dt-single">País de origen: </dt>
+        <dd class="dd-simple">{{cast.cast_nationality}}
+            <span id="flag" [ngSwitch]="cast.cast_nationality">
+              <img class="imgFlag" src="assets/images/US.png" alt="" *ngSwitchCase="'USA'">
+              <img class="imgFlag" src="assets/images/CO.png" alt="" *ngSwitchCase="'COL'">
+              <img class="imgFlag" src="assets/images/DE.png" alt="" *ngSwitchCase="'DE'">
+              <img class="imgFlag" src="assets/images/ES.png" alt="" *ngSwitchCase="'ES'">
+              <img class="imgFlag" src="assets/images/IT.png" alt="" *ngSwitchCase="'IT'">
+              <img class="imgFlag" src="assets/images/MX.png" alt="" *ngSwitchCase="'MX'">
+              <img class="imgFlag" src="assets/images/TH.png" alt="" *ngSwitchCase="'TH'">
+              <img class="imgFlag" src="assets/images/GB.png" alt="" *ngSwitchCase="'GB'">
+              <img class="imgFlag" src="assets/images/CN.png" alt="" *ngSwitchCase="'CN'">
+              <img class="imgFlag" src="assets/images/CN.png" alt="" *ngSwitchDefault>
+            </span>
+        </dd>
+        <dt class="dt-single">Ciudad de origen: </dt><dd class="dd-simple">{{cast.cast_birth_place}}</dd>
+      </dl>
+    </div>
+    <div id="right-column" fxFlex="50%">
+      <div class="frame">
+        <img src="{{cast.cast_pic}}" alt="" >
+      </div>
+    </div>
+  </div>
+</div>
+

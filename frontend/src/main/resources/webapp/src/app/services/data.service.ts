@@ -19,6 +19,7 @@ export class DataService {
     public urlUltimasPeliculas = "http://localhost:33333/contents/latestMovies?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
     public urlUltimasSeries = "http://localhost:33333/contents/latestShows?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
     public urlContByid = "http://localhost:33333/contents/content/search"
+    public urlCastById = "http://localhost:33333/cast/cast/search"
     public urlCastByContId = "http://localhost:33333/cast/castByContentId/search"
     constructor(private http:HttpClient) { }
 
@@ -67,13 +68,25 @@ export class DataService {
         }
         return this.http.post<any>(this.urlContByid,postBody, this.httOptions);
     }
+    getCastById(cast_id : Number) : Observable<any[]>{
+        const postBody = {
+            "filter": {
+                "cast_id": +cast_id
+            },
+            "columns": [
+                "cast_id","cast_name","cast_birth_date","cast_dead_date"
+                ,"cast_birth_place","cast_nationality","cast_pic"
+            ]
+        }
+        return this.http.post<any>(this.urlCastById,postBody, this.httOptions);
+    }
     getCastByContId(content_id : Number) : Observable<any[]>{
         const postBody = {
             "filter": {
                 "content_id": +content_id
             },
             "columns": [
-                "cast_name"
+                "cast_name","cast_id"
             ]
         }
         return this.http.post<any>(this.urlCastByContId,postBody, this.httOptions);

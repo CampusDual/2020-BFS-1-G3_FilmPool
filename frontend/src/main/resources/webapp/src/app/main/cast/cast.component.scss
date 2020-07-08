@@ -1,0 +1,34 @@
+.frame{
+  border-radius: 20px;
+  width: 240px;
+  height: 360px;
+  border: 3px solid black;
+  background: #ffdf00;
+  margin: auto;
+  padding: 15px 10px;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+h1{
+  text-align: center;
+}
+.container-cell{
+  margin-left: 10px;
+}
+.dt-single {
+  float: left;
+  clear: left;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.dd-simple {
+  margin-left: 0px;
+}
+.imgFlag{
+  margin-left: 5px;
+  width: 14px;
+  height: 12px;
+}

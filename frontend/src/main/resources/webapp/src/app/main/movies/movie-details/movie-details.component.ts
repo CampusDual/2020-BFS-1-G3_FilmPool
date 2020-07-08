@@ -1,5 +1,4 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { CastComponent } from 'app/shared/cast/cast.component';
 import {ActivatedRoute} from "@angular/router";
 import {DataService} from "../../../services/data.service";
 
