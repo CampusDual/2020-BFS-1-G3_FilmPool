@@ -13,7 +13,7 @@ export function loadMainModule() {
 
 export const routes: Routes = [
   { path: 'main', loadChildren: loadMainModule },
-  { path: 'login', loadChildren: loadLoginModule },
+  //{ path: 'login', loadChildren: loadLoginModule },
   { path: '', redirectTo: 'main', pathMatch: 'full' }
 ];
 
