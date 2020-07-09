@@ -1,15 +1,16 @@
 <mat-toolbar color="primary" class="fil-head">
+
     <mat-toolbar-row>
-        <button mat-icon-button>
+        <!--button mat-icon-button>
             <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-        </button>
-        <h1>Film Pool</h1>
+        </button-->
+        <img class="logo" src="assets/images/filmpool.png" alt="">
         <span class="menu-spacer"></span>
         <div>
             <a mat-button [routerLink]="'/main/home'"> Inicio </a>
             <a mat-button [routerLink]="'/main/movies'">Últimas Películas </a>
             <a mat-button [routerLink]="'/main/shows'">Últimas Series </a>
-            <a mat-button [routerLink]="'/main/releases'"> Trailers </a>
+            <!--a mat-button [routerLink]="'/main/releases'"> Trailers </a-->
             <app-finder></app-finder>
         </div>
     </mat-toolbar-row>
