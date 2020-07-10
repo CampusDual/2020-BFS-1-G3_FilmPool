@@ -1,0 +1,25 @@
+<!--forma1-->
+<div class="container">
+    <mat-form-field appearance="fill"
+                 (select)="$event"
+
+    >
+        <mat-label>Generos</mat-label>
+        <mat-select >
+            <!--<mat-option *ngFor="let item of data" [value]="item.genre_name">
+                {{item.genre_name}}
+            </mat-option>-->
+            <mat-option *ngFor="let item of data" [innerHTML]="item.genre_name" [value]="item.genre_name"></mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<!--Forma 2-->
+<!--<div>
+    <select name="miselect" [(ngModel)]="data">
+        <option [value]="item" *ngFor="let item of data">{{item.genre_name}}</option>
+    </select>
+</div>-->
+
+
+
+

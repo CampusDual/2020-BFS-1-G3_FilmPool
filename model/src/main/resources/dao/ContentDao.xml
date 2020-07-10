@@ -33,5 +33,12 @@
             WHERE content_type = 0
             order by content_total_rating desc limit 6]]></Sentence>
         </Query>
+
+        <Query id="generos">
+            <Sentence><![CDATA[select c.content_poster_path, g.genre_name, c.content_name
+             from content c , genres g
+              where g.genre_id =c.genre_id ]]></Sentence>
+        </Query>
+
     </Queries>
 </JdbcEntitySetup>

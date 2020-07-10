@@ -81,5 +81,21 @@ public class ContentRestController extends ORestController<IContentService> {
         }
     }
 
+    @RequestMapping(value = "/generos", method = RequestMethod.POST,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public EntityResult generosContents(@RequestBody Map<String, Object> req) {
+        try {
+            List<String> columns = (List<String>) req.get("columns");
+            return iContentService.generos(columns);
+        } catch (Exception e) {
+            e.printStackTrace();
+            EntityResult res = new EntityResult();
+            res.setCode(EntityResult.OPERATION_WRONG);
+            return res;
+        }
+    }
+
+
+
 
 }

@@ -64,4 +64,10 @@ public class ContentService implements IContentService {
         return this.daoHelper.query(this.contentDao, keyMap, columns, "bestShowsRating");
     }
 
+    public EntityResult generos(List<String> columns)
+            throws OntimizeJEERuntimeException {
+        Map<String, Object> keyMap = new HashMap<String, Object>();
+        return this.daoHelper.query(this.contentDao, keyMap, columns, "generos");
+    }
+
 }

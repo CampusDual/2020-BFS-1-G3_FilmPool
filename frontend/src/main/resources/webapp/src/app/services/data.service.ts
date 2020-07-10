@@ -21,6 +21,11 @@ export class DataService {
     public urlContByid = "http://localhost:33333/contents/content/search"
     public urlCastById = "http://localhost:33333/cast/cast/search"
     public urlCastByContId = "http://localhost:33333/cast/castByContentId/search"
+
+    public urlBuscadorGeneros = "http://localhost:33333/genres/genres?columns=genre_id,genre_name"
+    public urlBuscadorGeneros2 = "http://localhost:33333/contents/generos"
+
+
     constructor(private http:HttpClient) { }
 
     getBuscador(): Observable<any[]>{
@@ -91,4 +96,23 @@ export class DataService {
         }
         return this.http.post<any>(this.urlCastByContId,postBody, this.httOptions);
     }
+//Forma1
+    getBuscadorGeneros(): Observable<any[]>{
+        return this.http.get<any>(this.urlBuscadorGeneros, this.httOptions)
+    }
+//Forma2
+    getBuscadorGeneros2(genre_id : Number) : Observable<any[]>{
+        const postBody = {
+            "filter": {
+                "genre_id": +genre_id
+            },
+            "columns": [
+                "content_poster_path"
+            ]
+        }
+        return this.http.post<any>(this.urlBuscadorGeneros2,postBody, this.httOptions);
+    }
+
+
+
 }

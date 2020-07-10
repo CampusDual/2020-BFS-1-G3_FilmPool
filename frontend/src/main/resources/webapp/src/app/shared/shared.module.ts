@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FinderComponent } from './finder/finder.component';
 import {RouterModule} from "@angular/router";
 import {AutocompleteLibModule} from "angular-ng-autocomplete";
+import {GenresFilterComponent} from "./genres-filter/genres-filter.component";
 
 
 @NgModule({
@@ -14,16 +15,20 @@ import {AutocompleteLibModule} from "angular-ng-autocomplete";
         RouterModule,
         AutocompleteLibModule
     ],
-  declarations: [
-  HeaderComponent,
-  FooterComponent,
-  FinderComponent],
+    declarations: [
+        HeaderComponent,
+        FooterComponent,
+        FinderComponent,
+        GenresFilterComponent,
+        GenresFilterComponent
+    ],
 
     exports: [
         CommonModule,
         HeaderComponent,
         FooterComponent,
-        FinderComponent
+        FinderComponent,
+        GenresFilterComponent
     ]
 
 })
