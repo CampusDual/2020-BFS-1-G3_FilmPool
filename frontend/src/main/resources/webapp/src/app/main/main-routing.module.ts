@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuardService } from 'ontimize-web-ngx';
 import { FaqsPageModule } from './faqs/faqs-page.module';
-import { FaqsPageComponent } from './faqs/faqs-page/faqs-page.component';
 import { MainComponent } from './main.component';
 import { HomeModule } from './home/home.module';
 import {MoviesModule} from "./movies/movies.module";
@@ -24,6 +23,9 @@ export function loadReleasesModule() {
 }
 export function loadCastModule() {
   return CastModule
+}
+export function loadFaqsModule() {
+  return FaqsPageModule
 }
 
 export const routes: Routes = [
@@ -52,6 +54,10 @@ export const routes: Routes = [
       {
         path: 'cast',
         loadChildren: loadCastModule
+      },
+      {
+        path: 'faqs',
+        loadChildren: loadFaqsModule
       }
     ]
   }

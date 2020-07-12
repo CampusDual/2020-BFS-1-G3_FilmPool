@@ -10,6 +10,7 @@ export class FaqsPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
