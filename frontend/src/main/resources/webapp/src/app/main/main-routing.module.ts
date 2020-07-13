@@ -69,7 +69,7 @@ export const routes: Routes = [
         loadChildren: loadFaqsModule
       },
       {
-privacy_page
+
         path: 'privacy',
         loadChildren: loadPrivacyModule
 
