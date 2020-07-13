@@ -9,6 +9,7 @@ import {MoviesModule} from "./movies/movies.module";
 import {ShowsModule} from "./shows/shows.module";
 import {ReleasesModule} from "./releases/releases.module";
 import {CastModule} from "./cast/cast.module";
+import { AboutPageModule } from './about/about-page.module';
 
 export function loadHomeModule() {
   return HomeModule;
@@ -27,6 +28,9 @@ export function loadCastModule() {
 }
 export function loadFaqsModule() {
   return FaqsPageModule
+}
+export function loadAboutModule() {
+  return AboutPageModule
 }
 
 export function loadPrivacyModule() {
@@ -65,8 +69,13 @@ export const routes: Routes = [
         loadChildren: loadFaqsModule
       },
       {
+privacy_page
         path: 'privacy',
         loadChildren: loadPrivacyModule
+
+        path: 'about',
+        loadChildren: loadAboutModule
+
       }
     ]
   }
