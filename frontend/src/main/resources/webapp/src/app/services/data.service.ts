@@ -12,7 +12,7 @@ export class DataService {
       'Authorization': 'Basic ZGVtbzpkZW1vdXNlcg=='
     })
   }
-
+    //base de datos local
     public urlBuscador = "http://localhost:33333/contents/content?columns=content_name,content_id"
     public urlMejoresPeliculas = "http://localhost:33333/contents/bestMoviesRating?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
     public urlMejoresSeries = "http://localhost:33333/contents/bestShowsRating?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
@@ -21,6 +21,8 @@ export class DataService {
     public urlContByid = "http://localhost:33333/contents/content/search"
     public urlCastById = "http://localhost:33333/cast/cast/search"
     public urlCastByContId = "http://localhost:33333/cast/castByContentId/search"
+    //Api externa
+    public urlTheMovieDBlive = "https://api.themoviedb.org/3/movie/now_playing?api_key=1f14a389068de8968d5e828110abf4d7&language=es-Es&page=1"
     constructor(private http:HttpClient) { }
 
     getBuscador(): Observable<any[]>{
@@ -90,5 +92,8 @@ export class DataService {
             ]
         }
         return this.http.post<any>(this.urlCastByContId,postBody, this.httOptions);
+    }
+    getPeliculasLive(){
+      return this.http.get<any>(this.urlTheMovieDBlive)
     }
 }
