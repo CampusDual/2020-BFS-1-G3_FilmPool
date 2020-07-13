@@ -10,6 +10,7 @@ import {ShowsModule} from "./shows/shows.module";
 import {ReleasesModule} from "./releases/releases.module";
 import {CastModule} from "./cast/cast.module";
 import { AboutPageModule } from './about/about-page.module';
+import {NowInCinemasModule} from "./now-in-cinemas/now-in-cinemas.module";
 
 export function loadHomeModule() {
   return HomeModule;
@@ -36,7 +37,9 @@ export function loadAboutModule() {
 export function loadPrivacyModule() {
   return PrivacyPageModule
 }
-
+export function loadLiveModule() {
+  return NowInCinemasModule
+}
 export const routes: Routes = [
   {
     path: '',
@@ -76,6 +79,11 @@ export const routes: Routes = [
       {
         path: 'about',
         loadChildren: loadAboutModule
+      },
+      {
+        path: 'live',
+        loadChildren: loadLiveModule
+
       }
     ]
   }
