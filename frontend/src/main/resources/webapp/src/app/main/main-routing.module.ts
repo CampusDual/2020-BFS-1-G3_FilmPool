@@ -72,7 +72,8 @@ export const routes: Routes = [
 
         path: 'privacy',
         loadChildren: loadPrivacyModule
-
+      },
+      {
         path: 'about',
         loadChildren: loadAboutModule
 
