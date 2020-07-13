@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { PrivacyPageModule } from '../app/main/policy/privacy-page.module';
 
 import {
   APP_CONFIG,
