@@ -1,0 +1,31 @@
+.imagenPelicula{
+  position: absolute;
+  left: 5px;
+  top: 32px;
+}
+textarea{
+  font-size: medium;
+  background-color: lightgrey;
+}
+.valoracion{
+  position: absolute;
+  top: 35px;
+  left: 290px;
+}
+.plot{
+  font-size: small;
+  border-radius: 5px;
+  margin-left: 2px;
+  resize: none;
+}
+
+.mat-grid-tile-header{
+  border-radius: 20px;
+}
+.tile{
+  margin-top: 12px;
+}
+.imgTitulo{
+  max-width: 50%;
+  height: auto;
+}
