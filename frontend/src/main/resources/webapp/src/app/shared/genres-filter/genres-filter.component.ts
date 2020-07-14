@@ -9,10 +9,44 @@ import {DataService} from "../../services/data.service";
     providers: [DataService]
 })
 export class GenresFilterComponent implements OnInit {
+    public data$ = [];
+    public list2= []
+
+
+    constructor(private dataService: DataService, private router: Router) {
+
+    }
+
+    getData() {
+        this.dataService.getBuscadorGeneros().subscribe(response => {
+            response["data"].forEach(content => {
+                this.data$.push(content);
+            })
+        });
+    }
+
+    ngOnInit() {
+        this.getData();
+    }
+
+    onSelected(item) {
+        //this.router.navigate(["/main/movies/",item.genre_id])
+        this.dataService.getBuscadorGeneros2(item).subscribe(response => {
+            response["data"].forEach(e => {
+                this.list2.push(e)
+            })
+        })
+    }
+}
+
+
+
+
+
     //Forma 2
-    public  content;
+   /* public  content;
     public data = [];
-    constructor(activatedRoute : ActivatedRoute, dataService : DataService) {
+    constructor(activatedRoute : ActivatedRoute, dataService : DataService,private router : Router) {
         activatedRoute.params.subscribe(params =>{
             dataService.getBuscadorGeneros2(params["genre_id"]).subscribe(response =>{
                 this.content = response["data"][0];
@@ -26,15 +60,18 @@ export class GenresFilterComponent implements OnInit {
         })
 
     }
+    onSelected(item){
+        this.router.navigate(["/main/movies/",item.genre_id])
+    }
 
     ngOnInit() {
 
 
     }
-}
+}*/
 //Forma 1
-/*
-    public data = [];
+
+   /* public data = [];
     public keyword = "genre_name";
     public notFound = "No se encuentra"
 
@@ -43,7 +80,7 @@ export class GenresFilterComponent implements OnInit {
     }
 
     getData(){
-        this.dataService.getBuscadorGeneros2().subscribe(response =>{
+        this.dataService.getBuscadorGeneros().subscribe(response =>{
             response["data"].forEach(content=>{
                 this.data.push(content);
             })

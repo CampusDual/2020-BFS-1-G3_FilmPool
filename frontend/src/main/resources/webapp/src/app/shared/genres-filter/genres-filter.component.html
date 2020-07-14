@@ -1,24 +1,52 @@
 <!--forma1-->
+
+
 <div class="container">
     <mat-form-field appearance="fill"
-                 (select)="$event"
+
 
     >
         <mat-label>Generos</mat-label>
-        <mat-select >
-            <!--<mat-option *ngFor="let item of data" [value]="item.genre_name">
+        <mat-select class="form-control" ng-model="busqueda">
+            <mat-option *ngFor="let item of data$" [value]="item.genre_name">
                 {{item.genre_name}}
-            </mat-option>-->
-            <mat-option *ngFor="let item of data" [innerHTML]="item.genre_name" [value]="item.genre_name"></mat-option>
+            </mat-option>
         </mat-select>
     </mat-form-field>
 </div>
+
+
+
+
 <!--Forma 2-->
 <!--<div>
     <select name="miselect" [(ngModel)]="data">
         <option [value]="item" *ngFor="let item of data">{{item.genre_name}}</option>
     </select>
 </div>-->
+<!--<div class="container">
+    <ng-autocomplete
+            [data]="data$"
+            [searchKeyword]="keyword"
+            [itemTemplate]="itemTemplate"
+            [notFoundTemplate]="notFoundTemplate"
+            [notFoundText]="notFound"
+            (selected)="onSelected($event)"
+            placeHolder="Introduce titulo.."
+    >
+    </ng-autocomplete>
+    <ng-template #itemTemplate let-item>
+        <a [innerHTML]="item.genre_name"></a>
+    </ng-template>
+    <ng-template #notFoundTemplate let-notFound>
+        <div [innerHTML]="notFound"></div>
+    </ng-template>
+</div>-->
+
+
+
+
+
 
 
 
