@@ -1,4 +1,4 @@
-<div class="container-cell">
+<!--<div class="container-cell">
   <h1 fxLayout="row">{{cast.cast_name}}</h1>
   <div fxLayout="row">
     <div id="left-column" fxLayout="column" fxFlex="50%">
@@ -31,5 +31,40 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
 
+
+
+<div class="panel">
+  <div class="grid-container">
+    <div class="nombre">Nombre: {{cast.cast_name}}</div>
+    <div class="foto"><img class="foto" src="{{cast.cast_pic}}" alt=""></div>
+    <div class="fecha">Fecha de nacimiento:
+      <div>{{cast.cast_birth_date | date}}</div>
+    </div>
+    <div class="fechamuerte"  *ngIf="cast.cast_dead_date != null">Fecha de defunción:
+      <div *ngIf="cast.cast_dead_date != null">{{cast.cast_dead_date | date}}</div>
+    </div>
+    <div class="pais">Pais:{{cast.cast_nationality}}
+      <span id="flag" [ngSwitch]="cast.cast_nationality">
+                        <img class="imgFlag" src="assets/images/US.png" alt="" *ngSwitchCase="'USA'">
+                        <img class="imgFlag" src="assets/images/CO.png" alt="" *ngSwitchCase="'COL'">
+                        <img class="imgFlag" src="assets/images/DE.png" alt="" *ngSwitchCase="'DE'">
+                        <img class="imgFlag" src="assets/images/ES.png" alt="" *ngSwitchCase="'ES'">
+                        <img class="imgFlag" src="assets/images/IT.png" alt="" *ngSwitchCase="'IT'">
+                        <img class="imgFlag" src="assets/images/MX.png" alt="" *ngSwitchCase="'MX'">
+                        <img class="imgFlag" src="assets/images/TH.png" alt="" *ngSwitchCase="'TH'">
+                        <img class="imgFlag" src="assets/images/GB.png" alt="" *ngSwitchCase="'GB'">
+                        <img class="imgFlag" src="assets/images/CN.png" alt="" *ngSwitchCase="'CN'">
+                        <img class="imgFlag" src="assets/images/CA.png" alt="" *ngSwitchCase="'CA'">
+                        <img class="imgFlag" src="assets/images/CN.png" alt="" *ngSwitchDefault>
+                    </span>
+    </div>
+    <div class="duracion">
+     Ciudad de Origen: {{cast.cast_birth_place}}
+    </div>
+
+
+
+  </div>
+</div>

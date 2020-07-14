@@ -1,4 +1,4 @@
-<div class="container-cell">
+<!--<div class="container-cell">
     <h1 fxLayout="row">{{content.content_name}}</h1>
      <div fxLayout="row">
          <div id="left-column" fxLayout="column" fxFlex="50%">
@@ -37,4 +37,77 @@
          </div>
     </div>
 </div>
+-->
+<!--
+<div class="panel">
+    <div class="grid-container">
+    <div class="Poster"> <img class="foto" src="{{content.content_poster_path}}" alt="" ></div>
+        <div class="Valoracion">Valoracion: {{content.content_total_rating}} <i class="material-icons">star</i></div>
 
+    <div class="Datro2">
+        <div class="TItuloPeqieño\:">{{content.content_name}}</div>
+        <div class="fecha">Fecha:{{content.content_release_date | date}}</div>
+        <div class="pais">Pais:
+            <dd class="dd-simple">{{content.content_nationality}}
+                <span id="flag" [ngSwitch]="content.content_nationality">
+                        <img class="imgFlag" src="assets/images/US.png" alt="" *ngSwitchCase="'USA'">
+                        <img class="imgFlag" src="assets/images/CO.png" alt="" *ngSwitchCase="'COL'">
+                        <img class="imgFlag" src="assets/images/DE.png" alt="" *ngSwitchCase="'DE'">
+                        <img class="imgFlag" src="assets/images/ES.png" alt="" *ngSwitchCase="'ES'">
+                        <img class="imgFlag" src="assets/images/IT.png" alt="" *ngSwitchCase="'IT'">
+                        <img class="imgFlag" src="assets/images/MX.png" alt="" *ngSwitchCase="'MX'">
+                        <img class="imgFlag" src="assets/images/TH.png" alt="" *ngSwitchCase="'TH'">
+                        <img class="imgFlag" src="assets/images/GB.png" alt="" *ngSwitchCase="'GB'">
+                        <img class="imgFlag" src="assets/images/CN.png" alt="" *ngSwitchCase="'CN'">
+                        <img class="imgFlag" src="assets/images/CA.png" alt="" *ngSwitchCase="'CA'">
+                        <img class="imgFlag" src="assets/images/CN.png" alt="" *ngSwitchDefault>
+                    </span>
+            </dd>
+        </div>
+        <div class="duracion">
+            <dt *ngIf="content.content_type===0" class="dt-single">Capítulos: </dt><dd *ngIf="content.content_type===0" class="dd-simple">{{content.content_duration}}</dd>
+            <dt *ngIf="content.content_type===1" class="dt-single">Duración: </dt><dd *ngIf="content.content_type===1" class="dd-simple">{{content.content_duration}} minutos</dd></div>
+        <div *ngIf="cast.length>0" class="reparto">Reparto:
+           <dd *ngFor="let actor of cast" class="dd-cast" routerLink="/main/cast/{{actor.cast_id}}">{{actor.cast_name}}</dd>
+        </div>
+    </div>
+    <div class="Sinpsis">Sinpsis: {{content.content_plot}}</div>
+</div>
+</div>-->
+
+<div class="panel">
+    <div class="grid-container">
+        <div class="Titulo">Titulo: {{content.content_name}}</div>
+        <div class="Portada"><img class="foto" src="{{content.content_poster_path}}" alt=""></div>
+        <div class="fecha">Fecha:{{content.content_release_date | date}}</div>
+        <div class="pais">Pais:{{content.content_nationality}}
+                    <span id="flag" [ngSwitch]="content.content_nationality">
+                        <img class="imgFlag" src="assets/images/US.png" alt="" *ngSwitchCase="'USA'">
+                        <img class="imgFlag" src="assets/images/CO.png" alt="" *ngSwitchCase="'COL'">
+                        <img class="imgFlag" src="assets/images/DE.png" alt="" *ngSwitchCase="'DE'">
+                        <img class="imgFlag" src="assets/images/ES.png" alt="" *ngSwitchCase="'ES'">
+                        <img class="imgFlag" src="assets/images/IT.png" alt="" *ngSwitchCase="'IT'">
+                        <img class="imgFlag" src="assets/images/MX.png" alt="" *ngSwitchCase="'MX'">
+                        <img class="imgFlag" src="assets/images/TH.png" alt="" *ngSwitchCase="'TH'">
+                        <img class="imgFlag" src="assets/images/GB.png" alt="" *ngSwitchCase="'GB'">
+                        <img class="imgFlag" src="assets/images/CN.png" alt="" *ngSwitchCase="'CN'">
+                        <img class="imgFlag" src="assets/images/CA.png" alt="" *ngSwitchCase="'CA'">
+                        <img class="imgFlag" src="assets/images/CN.png" alt="" *ngSwitchDefault>
+                    </span>
+        </div>
+        <div class="duracion">
+            <dt *ngIf="content.content_type===0" class="dt-single">Capítulos:</dt>
+            <dd *ngIf="content.content_type===0" class="dd-simple">{{content.content_duration}}</dd>
+            <dt *ngIf="content.content_type===1" class="dt-single">Duración:</dt>
+            <dd *ngIf="content.content_type===1" class="dd-simple">{{content.content_duration}} minutos</dd>
+        </div>
+        <div class="valoracion"></div>
+        <div class="reparto">
+            Reparto:
+            <dd *ngFor="let actor of cast" class="dd-cast" routerLink="/main/cast/{{actor.cast_id}}">{{actor.cast_name}}
+        </div>
+        <div class="sinopsis">
+            Sinpsis: {{content.content_plot}}
+        </div>
+    </div>
+</div>
