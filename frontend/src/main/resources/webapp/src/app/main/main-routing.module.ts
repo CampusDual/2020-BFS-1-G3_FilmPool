@@ -11,6 +11,7 @@ import {ReleasesModule} from "./releases/releases.module";
 import {CastModule} from "./cast/cast.module";
 import { AboutPageModule } from './about/about-page.module';
 import {NowInCinemasModule} from "./now-in-cinemas/now-in-cinemas.module";
+import {GenresModule} from "./genres/genres.module";
 
 export function loadHomeModule() {
   return HomeModule;
@@ -39,6 +40,9 @@ export function loadPrivacyModule() {
 }
 export function loadLiveModule() {
   return NowInCinemasModule
+}
+export function loadGenresModule() {
+  return GenresModule
 }
 export const routes: Routes = [
   {
@@ -83,7 +87,10 @@ export const routes: Routes = [
       {
         path: 'live',
         loadChildren: loadLiveModule
-
+      },
+      {
+        path: 'genres',
+        loadChildren: loadGenresModule
       }
     ]
   }

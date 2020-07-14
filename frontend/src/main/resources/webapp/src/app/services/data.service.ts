@@ -18,9 +18,10 @@ export class DataService {
     public urlMejoresSeries = "http://localhost:33333/contents/bestShowsRating?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
     public urlUltimasPeliculas = "http://localhost:33333/contents/latestMovies?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
     public urlUltimasSeries = "http://localhost:33333/contents/latestShows?columns=content_name,content_id,content_poster_path,content_total_rating,content_total_vote,content_release_date"
-    public urlContByid = "http://localhost:33333/contents/content/search"
+    public urlContentSearch = "http://localhost:33333/contents/content/search"
     public urlCastById = "http://localhost:33333/cast/cast/search"
     public urlCastByContId = "http://localhost:33333/cast/castByContentId/search"
+    public urlGenres = "http://localhost:33333/genres/genres?columns=genre_id,genre_name"
     //Api externa
     public urlTheMovieDBlive = "https://api.themoviedb.org/3/movie/now_playing?api_key=1f14a389068de8968d5e828110abf4d7&language=es-Es&page=1"
     constructor(private http:HttpClient) { }
@@ -68,7 +69,7 @@ export class DataService {
                 "content_duration"
             ]
         }
-        return this.http.post<any>(this.urlContByid,postBody, this.httOptions);
+        return this.http.post<any>(this.urlContentSearch,postBody, this.httOptions);
     }
     getCastById(cast_id : Number) : Observable<any[]>{
         const postBody = {
@@ -95,5 +96,22 @@ export class DataService {
     }
     getPeliculasLive(){
       return this.http.get<any>(this.urlTheMovieDBlive)
+    }
+    getGenres(){
+      return this.http.get<any>(this.urlGenres, this.httOptions)
+    }
+    getContentByGenre(genre_id: Number){
+        const postBody = {
+            "filter": {
+                "genre_id": +genre_id
+            },
+            "columns": [
+                "content_name","content_id","content_poster_path","content_total_rating",
+                "content_total_vote","content_plot",
+                "content_release_date","content_trailer","content_nationality","content_type",
+                "content_duration"
+            ]
+        }
+        return this.http.post<any>(this.urlContentSearch,postBody, this.httOptions);
     }
 }
