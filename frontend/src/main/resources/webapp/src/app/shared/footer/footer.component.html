@@ -1,4 +1,4 @@
-
+<!--
 <mat-toolbar color="primary" class="footer">
     <mat-toolbar-row>
         <span class="menu-spacer"></span>
@@ -13,4 +13,30 @@
         <mat-icon>copyright</mat-icon>
         <span style="font-size: 12px;" >FilmPool todos los derechos registrados</span>
     </mat-toolbar-row>
-</mat-toolbar>
+</mat-toolbar>-->
+<footer class="page-footer blue text-center text-md-left mt-0">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <h5 class="title mb-3"></h5>
+                <ul>
+                    <li><a mat-button [routerLink]="'/main/faqs'"> Preguntas Frecuentes </a></li>
+                    <li><a mat-button [routerLink]="'/main/privacy'">Politica de privacidad y uso</a></li>
+                    <li> <a mat-button [routerLink]="'/main/about'"> Contacto </a></li>
+                </ul>
+
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+    </div>
+
+
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © Copyright: FilmPool todos los derechos registrados
+        </div>
+    </div>
+
+</footer>
+

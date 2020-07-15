@@ -37,16 +37,26 @@
 
 <div class="panel">
   <div class="grid-container">
-    <div class="nombre"><span style="font-weight: bolder">Nombre:</span>  {{cast.cast_name}}</div>
-    <div class="foto"><img class="foto" src="{{cast.cast_pic}}" alt=""></div>
-    <div class="fecha"><span style="font-weight: bolder">Fecha de nacimiento:</span>
-        <div>{{cast.cast_birth_date | date}}</div>
-    </div>
-    <div class="fechamuerte"  *ngIf="cast.cast_dead_date != null"><span style="font-weight: bolder">Fecha de defunción:</span>
-        <div *ngIf="cast.cast_dead_date != null">{{cast.cast_dead_date | date}}</div>
-    </div>
-    <div class="pais"><span style="font-weight: bolder">Pais:</span> {{cast.cast_nationality}}
-      <span id="flag" [ngSwitch]="cast.cast_nationality">
+      <div class="a">
+          <div class="nombre"><span style="font-weight: bolder">Nombre:</span>  {{cast.cast_name}}</div>
+
+      </div>
+          <div class="d">
+              <div class="fecha"><span style="font-weight: bolder">Fecha de nacimiento:</span></div>
+              <div>{{cast.cast_birth_date | date}}</div>
+              <div class="fechamuerte"  *ngIf="cast.cast_dead_date != null"><span style="font-weight: bolder">Fecha de defunción:</span>
+                  <div *ngIf="cast.cast_dead_date != null">{{cast.cast_dead_date | date}}</div>
+              </div>
+          </div>
+
+      <div class="b">
+          <div class="duracion">
+              <span style="font-weight: bolder">Ciudad de origen:</span> {{cast.cast_birth_place}}
+          </div>
+      </div>
+      <div class="e">
+          <div class="pais"><span style="font-weight: bolder">Pais:</span> {{cast.cast_nationality}}
+              <span id="flag" [ngSwitch]="cast.cast_nationality">
                         <img class="imgFlag" src="assets/images/US.png" alt="" *ngSwitchCase="'USA'">
                         <img class="imgFlag" src="assets/images/CO.png" alt="" *ngSwitchCase="'COL'">
                         <img class="imgFlag" src="assets/images/DE.png" alt="" *ngSwitchCase="'DE'">
@@ -59,10 +69,12 @@
                         <img class="imgFlag" src="assets/images/CA.png" alt="" *ngSwitchCase="'CA'">
                         <img class="imgFlag" src="assets/images/CN.png" alt="" *ngSwitchDefault>
                     </span>
-    </div>
-    <div class="duracion">
-        <span style="font-weight: bolder">Ciudad de origen:</span> {{cast.cast_birth_place}}
-    </div>
+          </div>
+      </div>
+      <div class="foto"><img class="foto" src="{{cast.cast_pic}}" alt=""></div>
+
+
+
 
 
 

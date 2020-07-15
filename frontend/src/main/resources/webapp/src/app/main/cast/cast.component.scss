@@ -34,26 +34,27 @@ h1{
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 1px 1px;
-  grid-template-areas: "nombre nombre . Portada Portada" "fecha pais . Portada Portada" "ciudad reparto reparto Portada Portada" "sinopsis sinopsis sinopsis valoracion valoracion";
+  grid-template-areas:  "a b c c c"
+                        "d e c c c"
+                        "d e c c c" ;
   padding-left: 5%;
   padding-top: 5%;
 }
 
-.nombre { grid-area: nombre;
+.a { grid-area: a;
 }
 
-.foto { grid-area: Portada;
+.b { grid-area: b;
+}
+.d{
+  grid-area: d;
+}
+.e{
+  grid-area: e;
 }
 
-.fecha { grid-area: fecha;
+.foto { grid-area: c;
 }
-
-.pais { grid-area: pais;
-}
-
-.ciudad { grid-area: ciudad;
-}
-
 
 
 .panel {
