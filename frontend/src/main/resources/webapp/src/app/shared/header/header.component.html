@@ -4,7 +4,14 @@
         <!--button mat-icon-button>
             <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
         </button-->
-        <img class="logo" src="assets/images/filmpool.png" alt="">
+        <div class="container-logo">
+
+            <a href="/main/home">
+                <img class="logo" src="assets/images/1.png" alt="">
+                <div class="mini-logo">FilmPool</div>
+            </a>
+        </div>
+
         <span class="menu-spacer"></span>
         <div>
             <a mat-button [routerLink]="'/main/home'"> Inicio </a>
@@ -17,7 +24,7 @@
         </div>
     </mat-toolbar-row>
 
+
     <mat-toolbar-row>
-        <span style="font-size: 12px;">Tu página de confianza!</span>
     </mat-toolbar-row>
 </mat-toolbar>
