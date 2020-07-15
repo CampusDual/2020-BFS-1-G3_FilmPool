@@ -77,10 +77,10 @@
 
 <div class="panel">
     <div class="grid-container">
-        <div class="Titulo">Titulo: {{content.content_name}}</div>
+        <div class="Titulo"><span style="font-weight: bolder">Titulo:</span>  {{content.content_name}}</div>
         <div class="Portada"><img class="foto" src="{{content.content_poster_path}}" alt=""></div>
-        <div class="fecha">Fecha:{{content.content_release_date | date}}</div>
-        <div class="pais">Pais:{{content.content_nationality}}
+        <div class="fecha"><span style="font-weight: bolder">Fecha: </span> {{content.content_release_date | date}}</div>
+        <div class="pais"><span style="font-weight: bolder">Pais: </span> {{content.content_nationality}}
                     <span id="flag" [ngSwitch]="content.content_nationality">
                         <img class="imgFlag" src="assets/images/US.png" alt="" *ngSwitchCase="'USA'">
                         <img class="imgFlag" src="assets/images/CO.png" alt="" *ngSwitchCase="'COL'">
@@ -96,18 +96,18 @@
                     </span>
         </div>
         <div class="duracion">
-            <dt *ngIf="content.content_type===0" class="dt-single">Capítulos:</dt>
+            <dt *ngIf="content.content_type===0" class="dt-single"><span style="font-weight: bolder">Capitulos: </span> </dt>
             <dd *ngIf="content.content_type===0" class="dd-simple">{{content.content_duration}}</dd>
-            <dt *ngIf="content.content_type===1" class="dt-single">Duración:</dt>
-            <dd *ngIf="content.content_type===1" class="dd-simple">{{content.content_duration}} minutos</dd>
+            <dt *ngIf="content.content_type===1" class="dt-single"><span style="font-weight: bolder">Duración:</span> </dt>
+            <dd *ngIf="content.content_type===1" class="dd-simple">{{content.content_duration}} minutos </dd>
         </div>
         <div class="valoracion"></div>
-        <div class="reparto">
-            Reparto:
-            <dd *ngFor="let actor of cast" class="dd-cast" routerLink="/main/cast/{{actor.cast_id}}">{{actor.cast_name}}
+        <div class="reparto" *ngIf="cast.length>0">
+            <span style="font-weight: bolder">Reparto:</span>
+            <dd *ngFor="let actor of cast" class="dd-cast" routerLink="/main/cast/{{actor.cast_id}}" style="cursor: pointer">{{actor.cast_name}}</dd>
         </div>
         <div class="sinopsis">
-            Sinpsis: {{content.content_plot}}
+           <span style="font-weight: bolder">Sinopsis:</span>  {{content.content_plot}}
         </div>
     </div>
 </div>
